@@ -1,0 +1,82 @@
+.header-shop{
+	min-height: 200px;
+}
+.header-shop:hover{
+	opacity:.6;
+}
+
+span.precio-compra{
+	font-size: 11px;
+	color: #dc132d;
+ }
+.precio-venta{
+	font-size: 11px;
+	color: #3f4344;
+}
+
+img.collection-title {
+	display:block;
+    margin:auto;
+}
+
+.description-content {
+	width: 80%;
+	display:block;
+    margin:auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Arial,serif;
+}
+
+.fixed {
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.links_section {
+    padding-top: .55em;
+    margin: 0;
+}
+
+.links_section li {
+    display: inline;
+    padding-right: 1em;
+    list-style: none;
+    letter-spacing: .1em;
+    font-size: .5em;
+}
+
+.header_link a {
+    color: #FFF;
+    transition: all .3s ease-in-out;
+}
+
+.pre-header {
+    background-color: #BDBDBD;
+    color: #000000;
+    font-size: 12px;
+    padding: .5rem 0;
+    line-height: 140%;
+}
+
+.header-option {
+	margin-top: 10px;
+}
+
+.publicar {
+	margin-top: 8px;
+    height: 36px;
+    background-color: #f36;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 12px;
+    border: none;
+    box-shadow: none;
+    line-height: 36px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    margin-bottom: 10px;
+}
