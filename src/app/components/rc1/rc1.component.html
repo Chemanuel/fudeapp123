@@ -1,17 +1,53 @@
-<body>
-  <div class="container">
+<body class="text-center">
+  <form  class="form-signin" [formGroup]="forma" (ngSubmit)='guardarCambios()' novalidate="novalidate" >
+    <img class="mb-4" src="//src/assets/img/logo1.png" alt="" width="72" height="72">
+    <h1 class="display-4"><b>Creadores</b></h1>
+    <p class="lead">A un paso de vender más. Información personal.</p>
+      <hr class="my-4">
+    <label for="inputName" class="sr-only">Nombre</label>
 
-    <h4>Formularios <small>template</small></h4>
+    <input
+      type="name"
+      id="inputName"
+      class="form-control"
+      placeholder="Nombre completo"
+      formControlName="nombre"
+      required autofocus>
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input
+      type="email"
+      id="inputEmail"
+      class="form-control"
+      formControlName="correo"
+      placeholder="Email"
+      required>
+    <br>
+    <button
+      class="btn btn-lg btn-primary btn-block"
+      type="submit">Continuar &#8594;</button>
+    <p class="mt-5 mb-3 text-muted">&copy;fudefafa 2018-2019</p>
+  </form>
+</body>
+
+<!--<div class="container">
+
+    <h4>Creadores <small>template</small></h4>
     <hr>
-    <form>
+    <form (ngSubmit)="EnviarCreadores()" novalidate="">
 
     <div class="form-group row">
-      <label class="col-2 col-form-label">Nombre</label>
+      <label class="col-2 col-form-label">Marca</label>
       <div class="col-8">
 
         <input class="form-control"
                type="text"
-               placeholder="Nombre">
+               placeholder="Nombre de tu marca"
+               name="nombre"
+               ngModel
+               minlength="4"
+               maxlength="20"
+               required>
       </div>
     </div>
 
@@ -20,34 +56,25 @@
       <div class="col-8">
 
         <input class="form-control"
-               type="text"
-               placeholder="Apellido">
+        type= "email"
+        placeholder="Correo electrónico"
+        name="emailcreadores"
+        ngModel
+        minlength="4"
+        maxlength="20"
+        required>
       </div>
     </div>
-
-
-    <div class="form-group row">
-      <label class="col-2 col-form-label">Correo</label>
-      <div class="col-md-8">
-
-        <input class="form-control"
-        type="email"
-        placeholder="Correo electrónico">
-      </div>
-    </div>
-
-
 
 
   <div class="form-group row">
     <label class="col-2 col-form-label">&nbsp;</label>
     <div class="input-group col-md-8">
-      <button type="submit" class="btn btn-outline-primary">
-        Guardar
+      <button type="submit" class="btn btn-info btn-block">
+        Enviar &#8594;
       </button>
     </div>
   </div>
 
   </form>
-</div>
-</body>
+</div>-->

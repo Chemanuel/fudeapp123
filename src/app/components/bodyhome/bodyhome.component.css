@@ -1,8 +1,17 @@
+
 .principal {
+  background-color: #ffffff;
+  margin-bottom: 0%;
   padding: 2rem 1rem;
-  margin-bottom: 0rem;
-  background-color: #f5f5f5;
-  border-radius: .3rem;}
+  border-radius: .3rem;
+  color: rgba(0, 0, 0, 0.966);
+}
+.form {
+  background-color: rgb(245, 245, 245);
+}
+.form p {
+  color: rgb(0, 0, 0);
+}
 
 .col-md-5{
     margin: auto;
@@ -20,13 +29,13 @@
 
 .second-container h1 {
   text-align: center;
-  color: #6BC0D0;
+  color: rgb(107, 122, 208);
 }
 
 .context  {
   margin-top: 60px;
 }
-
+c
 .context h5 {
   color: #6BC0D0;
 }
@@ -40,7 +49,7 @@
 }
 
 .jumbotron-fluid {
-  background-color: #ab72e0;
+  background-color: #8f72e0;
   margin-bottom: 0px;
 }
 
@@ -53,12 +62,21 @@
   margin-top: 30px;
 
 }
+.small{
+  font-size: 7px;
+  line-height: 1.6;
+  color: white;
+}
 
 .cards {
   margin-top: 40px;
 }
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+.col-md-4 form one {
+  size: 5px;
 }
 
 /* Thin out the marketing headings */
@@ -102,4 +120,15 @@
 .worldwide{
   background-image: url("/src/assets/img/background2");
   position: absolute;
+}
+
+.registro {
+  background-color:#F73E8A;
+  border: #F73E8A;
+}
+.form-control {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }

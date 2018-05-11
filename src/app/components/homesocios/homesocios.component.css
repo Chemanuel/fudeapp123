@@ -64,3 +64,25 @@
   display: block;
 }
 
+.go-top {
+  bottom:20px;
+  position: fixed;
+  font-size:20px;
+  right:25px;
+  z-index:800;
+  background:#ea0d94;
+  color:#fff;
+  border-radius:5px;
+  height:40px;
+  width:40px;
+  text-align:center;
+  line-height:40px;
+  opacity:0;
+}
+.go-top:hover, .go-top:focus{
+  background:#07AAA5;
+  color:#fff;
+}
+.go-top.show {
+  opacity: 1;
+}

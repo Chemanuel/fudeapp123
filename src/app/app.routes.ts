@@ -7,7 +7,6 @@ import { HomesociosComponent } from './components/homesocios/homesocios.componen
 import { Rs1Component } from './components/rs1/rs1.component';
 
 
-
 const APP_ROUTES: Routes = [
   { path: 'home', component: BodyhomeComponent },
   { path: 'PreguntasFrecuentes', component: FaqscreadoresComponent },

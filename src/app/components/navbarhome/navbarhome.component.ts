@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbarhome',
   templateUrl: './navbarhome.component.html',
   styleUrls: ['./navbarhome.component.css']
 })
-export class NavbarhomeComponent implements OnInit {
+export class NavbarhomeComponent {
 
-  constructor() { }
-  ngOnInit() { }
+  @Input() public signUp: boolean;
 
 }

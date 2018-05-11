@@ -3,3 +3,7 @@
   -moz-box-shadow: 0 2px 1px -1px #999;
   box-shadow: 0 2px 1px -1px #999;
 }
+
+.dropdown-toggle {
+  color: gray;
+}
