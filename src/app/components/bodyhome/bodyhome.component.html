@@ -9,88 +9,20 @@
             <hr class="my-4">
           <p>El sitio que une algoritmos inteligentes, emprendedores y marcas para hacer grandes negocios.</p>
         <div class="form-row">
-        <div class="form-group col-md-6">
+          <div class="form-group col-md-6">
             <a  [routerLink]= "['/RegistroCreadores']" class="btn btn-primary mb-2 btn-block">Ingresar al panel de Marcas</a>
-        </div>
-        <!--<div class="form-group col-md-6">
+          </div>
+          <!--<div class="form-group col-md-6">
             <a  [routerLink]= "['/RegistroCreadores']" class="btn btn-outline-primary mb-2 btn-block">Más información</a>
-      </div>-->
-  </div>
-
+          </div>-->
+        </div>
         <small class="center">Registra tu marca completamente gratis.</small>
-</div>
-  <!--formulario Marcas-->
-  <div class="col-md-4 form">
-      <form [formGroup] ="forma" (ngSubmit)='guardarCambios()' #Forma="ngForm" novalidate="novalidate">
-        <br>
-        <p class="lead bg-inverse"> Regístrate tu marca y vender más.</p>
-            <hr class="my-4">
+      </div>
 
-            <div class="row" formGroupName="nombrecompleto">
-              <div class="form-group col-md-6">
-                  <input  [(ngModel)]="enviar.nombre"
-                          name="nombre"
-                          class="form-control"
-                          type="text"
-                          placeholder="Nombre(s)"
-                          formControlName="nombre">
-
-                          <!--<div  class="form-control-feedback"
-                                *ngIf="forma.controls['nombre'].errors?.required">
-                            Nombre obligatorio.
-                          </div>
-                          <div  class="form-control-feedback"
-                                *ngIf="forma.controls['nombre'].errors?.minlength">
-                            Por lo menos 3 caracteres.
-                          </div>-->
-              </div>
-              <div class="form-group col-md-6">
-                  <input  [(ngModel)]="enviar.apellidos"
-                          name="apellidos"
-                          class="form-control"
-                          type="text"
-                          placeholder="Apellidos"
-                          formControlName="apellidos">
-              </div>
-            </div>
-                  <input  [(ngModel)]="enviar.correo"
-                          name="correo"
-                          class="form-control"
-                          type="email"
-                          placeholder="Correo electrónico"
-                          formControlName="correo">
-
-                  <input  [(ngModel)]="enviar.pwd"
-                          name="password"
-                          class="form-control"
-                          type="password"
-                          placeholder="Crear contraseña"
-                          formControlName="pwd">
-            <br>
-                  <input  [(ngModel)]="enviar.brand"
-                          name="marca"
-                          class="form-control"
-                          type="text"
-                          placeholder="Nombre de Marca"
-                          formControlName="brand">
-
-                  <input  [(ngModel)]="enviar.weblink"
-                          name="weblink"
-                          class="form-control"
-                          type="text"
-                          placeholder="Instagram de marca"
-                          formControlName="weblink">
-            <br>
-          <button [disabled]="!Forma.valid"
-                  class="btn btn-lg btn-primary btn-block registro"
-                  type="submit">Continuar &#8594;</button>
-            <!--{{ forma.valid }}-->
-            <br>
-          <p class ="text-muted small">Al continuar, acepto que fudefafa o sus representantes pueden contactarme por correo electrónico, teléfono o mensajes de texto SMS (incluso por sistemas telefónicos automáticos) a la dirección de correo electrónico o redes que he proporcionado, aun para fines promocionales. He leído y comprendo la Declaración de privacidad para Marcas correspondiente.</p>
-      </form>
+      <!--formulario Marcas-->
+      <app-registro class="col-md-4"></app-registro>
+    </div><!-- ends row-->
   </div>
-  </div>
-</div>
 </div>
 <!-- Banner-->
 <div class="jumbotron jumbotron-fluid">

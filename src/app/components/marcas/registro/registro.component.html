@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <form [formGroup]="frmMarca" (ngSubmit)="onSubmit()">
+    <!-- Para que queremos el nombre o.O? -->
+    <div class="form-row">
+      <div class="form-group col-sm">
+        <input class="form-control" formControlName="nombre"
+          placeholder="Nombre(s)">
+      </div>
+      <div class="form-group col-sm">
+        <input class="form-control" formControlName="apellido"
+          placeholder="Apellidos" >
+      </div>
+    </div>
+    <div class="form-group">
+      <input class="form-control" formControlName="email"
+        placeholder="Correo electronco">
+    </div>
+    <div class="form-group">
+      <input class="form-control" formControlName="password"
+        placeholder="Contraseña">
+    </div>
+    
+    <div class="form-group">
+      <input class="form-control" formControlName="marca"
+        placeholder="Marca" />
+    </div>
+    <div class="form-group">
+      <input class="form-control" formControlName="instagram"
+        placeholder="Instagram" />
+    </div>
+    <div class="form-group">
+      <div class="col">
+        <button class="btn btn-primary" type="submit" [disabled]="frmMarca.pristine" >Continuar</button>
+      </div>
+    </div>
+    <p class ="text-muted small">Al continuar, acepto que fudefafa o sus representantes pueden contactarme por correo electrónico, teléfono o mensajes de texto SMS (incluso por sistemas telefónicos automáticos) a la dirección de correo electrónico o redes que he proporcionado, aun para fines promocionales. He leído y comprendo la declaración de privacidad para marcas correspondiente.</p>
+  </form>
+</div>
+

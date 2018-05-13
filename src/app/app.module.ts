@@ -3,19 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
-
-export const firebaseConfig = {
-  apiKey: 'AIzaSyBhE9Wjsg7rxbJIxVrTpdq10FdS_I7eW6o',
-  authDomain: 'fudefafa-191420.firebaseapp.com',
-  databaseURL: 'https://fudefafa-191420.firebaseio.com',
-  storageBucket: 'fudefafa-191420.appspot.com',
-  messagingSenderId: '813026987388'
-};
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 // servicios
+import { FirebaseService } from './services/firebase.service';
 import { FaqscService } from './servicios/faqscreadores.service';
 import { EnviarbrandService } from './servicios/enviarbrand.service';
-
 
 // rutas
 import { APP_ROUTING } from './app.routes';
@@ -24,6 +17,10 @@ import { APP_ROUTING } from './app.routes';
 import { AppComponent } from './app.component';
 import { NavbarhomeComponent } from './components/navbarhome/navbarhome.component';
 import { BodyhomeComponent } from './components/bodyhome/bodyhome.component';
+
+// Marcas
+import { RegistroComponent as RegistroMarcaComponent } from './components/marcas/registro/registro.component';
+
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { FaqscreadoresComponent } from './components/faqscreadores/faqscreadores.component';
 import { PrecioscreadoresComponent } from './components/precioscreadores/precioscreadores.component';
@@ -34,17 +31,23 @@ import { Enviarmarca } from './interface/enviarmarca.interface';
 import { CreadoresComponent } from './components/creadores/creadores.component';
 import { SociosComponent } from './components/socios/socios.component';
 import { TiendamuestraComponent } from './components/tiendamuestra/tiendamuestra/tiendamuestra.component';
+import { RegistroComponent } from './components/marcas/registro/registro.component';
 
-
-
-
+const firebase = {
+  apiKey: 'AIzaSyBhE9Wjsg7rxbJIxVrTpdq10FdS_I7eW6o'
+  , authDomain: 'fudefafa-191420.firebaseapp.com'
+  , databaseURL: 'https://fudefafa-191420.firebaseio.com'
+  , storageBucket: 'fudefafa-191420.appspot.com'
+  , messagingSenderId: '813026987388'
+};
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarhomeComponent,
-    BodyhomeComponent,
-    FooterComponent,
+    BodyhomeComponent
+    , RegistroMarcaComponent
+    , FooterComponent,
     FaqscreadoresComponent,
     PrecioscreadoresComponent,
     Rc1Component,
@@ -52,20 +55,22 @@ import { TiendamuestraComponent } from './components/tiendamuestra/tiendamuestra
     Rs1Component,
     CreadoresComponent,
     SociosComponent,
-    TiendamuestraComponent
-
+    TiendamuestraComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
     APP_ROUTING,
-    FormsModule,
-    HttpModule,
-    ReactiveFormsModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    HttpModule
+    , AngularFireModule.initializeApp(firebase)
+    , AngularFireAuthModule
+    , FormsModule
+    , ReactiveFormsModule
   ],
   providers: [
-    EnviarbrandService,
-    FaqscService,
+    EnviarbrandService
+    , FaqscService
+    , FirebaseService
   ],
   bootstrap: [AppComponent]
 })

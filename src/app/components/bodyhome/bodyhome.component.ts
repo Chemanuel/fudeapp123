@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
+
 import { Enviarmarca } from '../../interface/enviarmarca.interface';
 import { EnviarbrandService } from '../../servicios/enviarbrand.service';
 
@@ -46,12 +47,15 @@ export class BodyhomeComponent {
                                     ]),
     });
   }
-      guardarCambios() {
-        console.log(this.enviar);
+  
+  signIn(): void {
+    
+  }
 
-        this._enviarbrandService.nuevaMarca ( this.enviar )
-        .subscribe( data => {
+  guardarCambios(): void {
+    console.log(this.enviar);
 
-        });
+    this._enviarbrandService.nuevaMarca ( this.enviar )
+      .subscribe( data => {});
   }
 }
