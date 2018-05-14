@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+import { FirebaseService } from '../../../services/firebase.service';
+import { LoginInfo } from '../../auth/signup';
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -18,8 +21,16 @@ export class RegistroComponent implements OnInit {
   //   , instagram: new FormControl()
   // });
 
-  constructor(private builder: FormBuilder) {
+  constructor(private builder: FormBuilder
+    , private firebase: FirebaseService) {
     this.buildForm();
+
+    this.firebase.afAuth.authState
+      .subscribe(data => {
+        console.log('Happen with: %o', data);
+      }, err => {
+        console.log('Wrong way: %o', err);
+      });
   }
 
   ngOnInit(): void {
@@ -28,6 +39,12 @@ export class RegistroComponent implements OnInit {
   onSubmit(): void {
     //
     console.log('Form data: %o', JSON.stringify(this.frmMarca.value));
+
+    const datos: LoginInfo = {
+      email: this.frmMarca.get('email').value
+      , password: this.frmMarca.get('password').value
+    };
+    this.firebase.doSignUp(datos);
   }
 
   private buildForm(): void {

@@ -1,4 +1,9 @@
 import { Injectable } from '@angular/core';
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+
+import { LoginInfo } from '../components/auth/signup';
+
 // import * as firebase from 'firebase/app';
 // import 'firebase/auth';
 // import 'firebase/database';
@@ -8,7 +13,7 @@ export class FirebaseService {
 
   private app: any;
 
-  constructor() {
+  constructor(public afAuth: AngularFireAuth) {
     // this.app = firebase.initializeApp({
     //   apiKey: 'AIzaSyBhE9Wjsg7rxbJIxVrTpdq10FdS_I7eW6o'
     //   , authDomain: 'fudefafa-191420.firebaseapp.com'
@@ -18,4 +23,7 @@ export class FirebaseService {
     // });
    }
 
+  public doSignUp(user: LoginInfo): any {// Observable<Us {
+    this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
+  }
 }
